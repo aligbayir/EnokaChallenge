@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using BusinessLayer.AutoMappers.SiparisViewModels;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace BusinessLayer.Abstract
 {
     public interface ISiparisService
     {
-        List<Siparis> GetAll();
-        void Add(Siparis siparis);
-        void Update(Siparis siparis);
-        void Delete(Siparis siparis);
+        List<SiparisViewModel> GetAll();
+        Siparis GetByID(int id);
+        string Add(SiparisViewModel siparis);
+        string Update(SiparisViewModel siparis);
+        string Delete(int id);
     }
 }

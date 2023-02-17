@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using BusinessLayer.AutoMappers.FirmaViewModel;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace BusinessLayer.Abstract
 {
     public interface IFirmaService
     {
-        List<Firma> GetAll();
-        void Add(Firma firma);
-        void Update(Firma firma);
-        void Delete(Firma firma);
+        List<FirmaCreateViewModel> GetAll();
+        Firma GetByID(int id);
+        string Add(FirmaCreateViewModel firma);
+        string Update(FirmaCreateViewModel firma);
+        string Delete(int firmaid);
     }
 }
