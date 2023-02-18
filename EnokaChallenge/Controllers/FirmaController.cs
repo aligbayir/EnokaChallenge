@@ -25,7 +25,7 @@ namespace EnokaChallenge.Controllers
         [HttpPost]
         public IActionResult Add(FirmaCreateViewModel firma)
         {
-            return Ok(_firmaService.Add(firma));
+           return Ok(_firmaService.Add(firma));
         }
         [HttpPut]
         [Route("{id}")]
